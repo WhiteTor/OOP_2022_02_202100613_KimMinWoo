@@ -1,0 +1,37 @@
+package Korean_Wave;
+
+import java.util.*;
+
+public class aspect_of_koreanwave extends aspect{
+	public void printInfo() {
+		while(true) {
+			System.out.println("열람하고 싶은 정보의 번호를 입력해주세요(예시: 1)");
+			System.out.println("----------------------------------");
+			System.out.println("1. 음악의 한류");
+			System.out.println("2. 드라마의 한류");
+			System.out.println("3. 음식의 한류");
+			System.out.println("4. 만화의 한류");
+			System.out.println("돌아가시려면 '돌아가기' 를 입력해주세요.");
+			System.out.println("----------------------------------");
+			Scanner sc = new Scanner(System.in);
+			sc.next();
+			if(sc.equals("돌아가기")) {
+				break;
+				}
+			else if (sc.equals("1")) {
+				
+				}
+		}
+	}
+	
+}
+
+class aspect extends ask_continue{
+	public void printInfo_aspect() {
+		System.out.println("한류의 양상에 대해 설명하겠습니다.");
+	}
+	
+	public void end() {
+		ask_continue.breakorcontinue();
+	}
+}

@@ -1,0 +1,13 @@
+package Korean_Wave;
+
+import java.util.*;
+
+public class ask_continue {
+	static void breakorcontinue() {
+		System.out.println("계속 하시겠습니까?(Y/N)");
+		Scanner sc = new Scanner(System.in);
+		String go = sc.next();
+		sc.close();
+		if(go.equals("N")) {System.exit(0); }
+	}
+}

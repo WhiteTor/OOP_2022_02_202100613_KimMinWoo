@@ -1,0 +1,48 @@
+package Korean_Wave;
+
+import java.util.*;
+import Korean_Wave.enum_region;
+
+public class koreanwave_per_region {
+	public static void gettxt() {
+		while(true) {
+			System.out.println("txt파일로 저장하고 싶은 지역의 번호를 입력해주세요(예시: 1)");
+			System.out.println("----------------------------------");
+			System.out.println("1. ASIA");
+			System.out.println("2. EUROPE");
+			System.out.println("3. NORTH AMERICA");
+			System.out.println("4. SOUTH AMERICA");
+			System.out.println("5. AFRICA");
+			System.out.println("6. OCEANIA");
+			System.out.println("돌아가시려면 '돌아가기' 를 입력해주세요.");
+			System.out.println("----------------------------------");
+			Scanner sc = new Scanner(System.in);
+			String number = sc.next();
+			if(number.equals("돌아가기")) {
+				break;
+				}
+			enum_region selected = null;
+			switch(number) {   // 주석 6: 참조타입(열거타입)을 사용하는 switch문
+			case "1":
+				selected = enum_region.ASIA;
+				break;
+			case "2":
+				selected = enum_region.EUROPE;
+				break;
+			case "3":
+				selected = enum_region.NORTH_AMERICA;
+				break;
+			case "4":
+				selected = enum_region.SOUTH_AMERICA;
+				break;
+			case "5":
+				selected = enum_region.AFRICA;
+				break;
+			case "6":
+				selected = enum_region.OCEANIA;
+				break;
+			}
+			System.out.println("현재 선택된 국가: " + selected);
+		}
+	}
+}

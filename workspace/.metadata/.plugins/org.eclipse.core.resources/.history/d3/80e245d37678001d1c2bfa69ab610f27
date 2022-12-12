@@ -1,0 +1,18 @@
+package Korean_Wave;
+
+import java.util.*;
+
+public class meaning_of_koreanwave implements korean_wave_list {
+	void comment() {
+		System.out.println("한류는 대한민국의 문화가 세계로 퍼져나가며 인기를 얻는 현상을 말합니다.");
+		System.out.println("게임, 드라마, 영화, 음식, 산업 등 다양한 분야에서 일어나는 현상입니다.");
+		System.out.println("한류에는 다음과 같은 예시가 있습니다.");
+	}
+}
+
+public interface korean_wave_list {
+	String[] example_list = {"BTS", "기생충", "블랙핑크", "라인 웹툰", "대장금", "겨울연가"};
+}
+
+
+

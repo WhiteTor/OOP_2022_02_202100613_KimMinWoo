@@ -1,0 +1,98 @@
+package Korean_Wave;
+
+import java.util.*;
+
+public class aspect_of_koreanwave extends aspect{
+	public static void printInfo() {
+		while(true) {
+			System.out.println("열람하고 싶은 정보의 번호를 입력해주세요(예시: 1)");
+			System.out.println("----------------------------------");
+			System.out.println("1. 음악의 한류");
+			System.out.println("2. 드라마의 한류");
+			System.out.println("3. 음식의 한류");
+			System.out.println("4. 만화의 한류");
+			System.out.println("돌아가시려면 '돌아가기' 를 입력해주세요.");
+			System.out.println("----------------------------------");
+			Scanner sc = new Scanner(System.in);
+			String subject_aspect = sc.next();
+			if(subject_aspect.equals("돌아가기")) {
+				break;
+				}
+			else if (subject_aspect.equals("1")) {
+				aspect num1 = new music();   // 주석 5: 다형성(클래스)을 이용한 변수 생성
+				num1.printInfo_aspect();
+				num1.end();
+				}
+			else if (subject_aspect.equals("2")) {
+				aspect num2 = new drama();   // 주석 5: 다형성(클래스)을 이용한 변수 생성
+				num2.printInfo_aspect();
+				num2.end();
+				}
+			else if (subject_aspect.equals("3")) {
+				aspect num3 = new food();   // 주석 5: 다형성(클래스)을 이용한 변수 생성
+				num3.printInfo_aspect();
+				num3.end();
+				}
+			else if (subject_aspect.equals("4")) {
+				aspect num4 = new webtoon();   // 주석 5: 다형성(클래스)을 이용한 변수 생성
+				num4.printInfo_aspect();
+				num4.end();
+				}
+			else {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+				}
+		}
+	}
+	
+}
+
+class aspect extends ask_continue{   // 주석 5: 다형성(클래스)을 위해 생성한 부모 클래스
+	public void printInfo_aspect() {
+		System.out.println("한류의 양상에 대해 설명하겠습니다.");
+	}
+	
+	public void end() {
+		ask_continue.breakorcontinue();
+	}
+}
+
+class music extends aspect {
+	@Override   // 주석 5: 부모클래스로부터 상속받은 함수를 재정의
+	public void printInfo_aspect() {
+		System.out.println("한류의 양상, 그 중 음악에 대해 설명하겠습니다.");
+		System.out.println("음악, K-POP은 가장 잘 알려진 한류 문화 중 하나입니다.");
+		System.out.println("보아, 세븐과 같은 초창기 한류 가수/그룹들이 있었지만, 2015~2016년즈음 부터 본격적으로 K-POP이 유행하기 시작하였습니다.");
+		System.out.println("이후 2018년 BTS가 등장하고, 빌보드 1위를 달성하는 등 현재까지 K-POP은 전성기를 지나는 중입니다.");
+	}
+}
+
+class drama extends aspect {
+	@Override   // 주석 5: 부모클래스로부터 상속받은 함수를 재정의
+	public void printInfo_aspect() {
+		System.out.println("한류의 양상, 그 중 드라마에 대해 설명하겠습니다.");
+		System.out.println("대장금, 겨울연가를 시작으로, 한국 드라마는 중국, 일본 등지에서 사랑받기 시작하였습니다.");
+		System.out.println("과거 사회/문화적으로 폄하되던 한국 드라마가 중국, 대만, 일본 등지에서 사랑받는다는 것은 신선한 충격이었습니다.");
+		System.out.println("최근에는 코로나로 인해 OTT의 사용이 늘자, 오징어게임, 지금 우리 학교는 등 OTT를 통한 한국 드라마의 전파가 늘어났습니다.");
+		System.out.println("추가로, 드라마 뿐만 아니라 영화계에서도 봉준호 감독의 작품 등이 인기를 얻어 꽤 선전하고 있는 중입니다.");
+	}
+}
+
+class food extends aspect {
+	@Override   // 주석 5: 부모클래스로부터 상속받은 함수를 재정의
+	public void printInfo_aspect() {
+		System.out.println("한류의 양상, 그 중 음식에 대해 설명하겠습니다.");
+		System.out.println("한국 음식은 한국 드라마를 통해 알려지는 경우가 많습니다.");
+		System.out.println("가령, 별에서 온 그대나 사랑의 불시작에 나오는 치맥, 이태원 클라쓰의 순두부찌개 등이 있습니다.");
+		System.out.println("다만, 한식의 강한 마늘 향, 젓 냄새 등은 취향을 많이 타는 경우가 있어 현지화되거나 인기를 얻지 못하는 경우도 있습니다.");
+	}
+}
+
+class webtoon extends aspect {
+	@Override   // 주석 5: 부모클래스로부터 상속받은 함수를 재정의
+	public void printInfo_aspect() {
+		System.out.println("한류의 양상, 그 중 만화에 대해 설명하겠습니다.");
+		System.out.println("과거 만화는 일본이나 미국에서 그린 것이 인기가 많았습니다.");
+		System.out.println("이에 우리나라는 과거 종이 만화 시장을 공략하기보다는, 온라인 서비스에 주력하기 시작했습니다.");
+		System.out.println("그 결과, 라인 웹툰이나 카카오 웹툰 등은 동남아는 물론 만화 산업의 본 고장이라 할 수 있는 일본에서도 인기를 얻고 있습니다.");
+	}
+}

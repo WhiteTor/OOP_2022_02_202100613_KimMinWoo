@@ -1,0 +1,10 @@
+package Korean_Wave;
+
+public enum enum_region {
+	ASIA,
+	EUROPE,
+	NORTH_AMERICA,
+	SOUTH_AMERICA,
+	AFRICA,
+	OCEANIA
+}

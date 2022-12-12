@@ -1,0 +1,19 @@
+package Korean_Wave;
+
+import java.util.*;
+
+public class meaning_of_koreanwave extends ask_continue implements interface_korean_wave_list{   //주석 2, 주석 3: 클래스 상속 및 인터페이스 구현 클래스 선언
+	static void comment() {
+		System.out.println("한류는 대한민국의 문화가 세계로 퍼져나가며 인기를 얻는 현상을 말합니다.");
+		System.out.println("게임, 드라마, 영화, 음식, 산업 등 다양한 분야에서 일어나는 현상입니다.");
+		System.out.println("한류에는 다음과 같은 예시가 있습니다.");
+		for(int i = 0; i < 6; i++) {
+			System.out.printf(example_list[i] + " / ");
+		}
+		System.out.println();
+		ask_continue.breakorcontinue();
+	}
+}
+
+
+

@@ -1,0 +1,8 @@
+package Korean_Wave;
+
+import java.util.*;
+import Korean_Wave.enum_region;
+
+public class koreanwave_per_region {
+	
+}

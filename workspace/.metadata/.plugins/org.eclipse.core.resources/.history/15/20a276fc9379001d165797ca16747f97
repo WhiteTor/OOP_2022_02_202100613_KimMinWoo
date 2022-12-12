@@ -1,0 +1,39 @@
+package Korean_Wave;
+
+import java.util.*;
+import Korean_Wave.enum_region;
+
+public class koreanwave_per_region {
+	public static void gettxt() {
+		while(true) {
+			System.out.println("열람하고 싶은 지역의 번호를 입력해주세요(예시: 1)");
+			System.out.println("----------------------------------");
+			System.out.println("1. 아시아");
+			System.out.println("2. 유럽");
+			System.out.println("3. 북미");
+			System.out.println("4. 남미");
+			System.out.println("5. 아프리카");
+			System.out.println("6. 오세아니아");
+			System.out.println("돌아가시려면 '돌아가기' 를 입력해주세요.");
+			System.out.println("----------------------------------");
+			Scanner sc = new Scanner(System.in);
+			String subject_aspect = sc.next();
+			enum_region selected = null;
+			switch(subject_aspect) {
+			case "아시아":
+				selected = enum_region.ASIA;
+			case "유럽":
+				selected = enum_region.EUROPE;
+			case "북미":
+				selected = enum_region.NORTH_AMERICA;
+			case "남미":
+				selected = enum_region.SOUTH_AMERICA;
+			case "아프리카":
+				selected = enum_region.AFRICA;
+			case "오세아니아":
+				selected = enum_region.OCEANIA;
+			System.out.println("현재 선택된 국가: " + selected);
+			}
+		}
+	}
+}

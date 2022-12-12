@@ -1,0 +1,14 @@
+package Korean_Wave;
+
+public class koreanwave_per_region {
+	
+}
+
+public enum region {
+	ASIA,
+	EUROPE,
+	NORTH_AMERICA,
+	SOUTH_AMERICA,
+	AFRICA,
+	OCEANIA
+}
